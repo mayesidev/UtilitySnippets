@@ -1,0 +1,8 @@
+Regex for finding lines that have mixed tabs/spaces in indentation (specifically at least one tab, followed by N spaces):
+^(\s*)\t( +)
+
+Breakdown:
+^ = start of string (note: this does not necessarily mean line. This regex is meant to be evaluated on a line-by-line basis!)
+(\s*) = any whitespace character, between 0 and infinite times
+\t = tab
+( +) = space character, between 1 and infinite times

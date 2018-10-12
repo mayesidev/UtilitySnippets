@@ -1,4 +1,4 @@
-﻿$usePath = "C:\FilePathHere.txt"
+﻿$usePath = "C:\TestFolderPath\*.txt"
 $matchString = "(?s)matchTextLiteral1.matchTextLiteral2.matchTextLiteral3.matchTextLiteral4"
 
 ForEach( $file in get-childitem $usePath){

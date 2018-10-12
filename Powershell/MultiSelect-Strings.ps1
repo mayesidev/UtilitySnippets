@@ -25,7 +25,7 @@ filter MultiSelectString( [string[]]$matchPatterns, [bool]$shouldMatch )
    $_
 }
 
-$inFilePath = "C:\inFilePath.txt"
+$inFilePath = "C:\TestFolderPath\*.txt"
 $outFilePath = "C:\outFilePath.txt"
 $matchStrings = ("MatchMe")
 $notMatchStrings = ("NotMe")

@@ -1,0 +1,8 @@
+Regex for identifying trailing whitespace (tab or space):
+.*\S+(\t| )+$
+
+Breakdown:
+.* = any character any number of times.
+\S+ = any non-whitespace character one or more times.
+(\t| )+ = tab or space one or more times.
+$ = end of string (line when using a line-by-line search).

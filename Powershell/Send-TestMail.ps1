@@ -1,5 +1,4 @@
-# This is a Powershell script. It can be saved as '.ps1' instead of '.txt' and run, but the extension was changed for Outlook's mail filters.
-# A valid password needs to be provided as $networkPassword to authenticate. It has been removed here for security.
+# NOTE: Valid email address, password, SMTP server, from and to addresses must all be provided. They are simply placeholders values here for security.
 
 $networkUsername = 'email@address.tld'
 $networkPassword = 'password'

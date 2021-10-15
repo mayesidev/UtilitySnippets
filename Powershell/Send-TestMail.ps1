@@ -4,10 +4,11 @@ $networkUsername = 'email@address.tld'
 $networkPassword = 'password'
 
 $smtpServer = 'mailserver.url.tld'
+# port 25 is default SMTP, 587 is default for secure SMTP
 $smtpPort = 587
 $smtpClient = New-Object Net.Mail.SmtpClient($smtpServer,$smtpPort)
 
-$smtpClient.EnableSsl = $false
+$smtpClient.EnableSsl = $true
 $smtpClient.Credentials = New-Object System.Net.NetworkCredential($networkUsername,$networkPassword);
 
 $mailFrom = 'email@address.tld'

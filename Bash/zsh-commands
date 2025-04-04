@@ -1,0 +1,43 @@
+# Some handy functions and aliases I had set-up in my zshrc when doing Java application development on a Mac across several teams.
+
+# Functions
+function gitPullAll(){
+    (
+        cd $HOME/code/
+        for i in */*/.git
+            do (
+                echo "Pulling: " $i
+                cd $i/..
+                git pull
+            )
+        done
+    )
+}
+
+function gitResetAll(){
+    (
+        cd $HOME/code/
+        for i in */*/.git
+            do (
+                echo "Pulling: " $i
+                cd $i/..
+                git switch main
+                git reset --hard HEAD
+            )
+        done
+    )
+}
+
+# Command Aliases - some of these require corresponding gradle jobs or plugins to be defined
+alias br="./gradlew bootRun"
+alias tb="./gradlew test"
+alias tf="./gradlew testFrontend"
+alias tj="./gradlew testJourney"
+alias ta="./gradlew testAll"
+alias fc="./gradlew flywayClean"
+alias fm="./gradlew flywayMigrate"
+alias sq="./gradlew sonar -Dsonar.token=$SONAR_USER_TOKEN"
+alias dd="docker compose down"
+alias du="docker compose up -d"
+alias gpa="gitPullAll"
+alias gra="gitResetAll"
